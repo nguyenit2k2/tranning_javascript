@@ -10,14 +10,18 @@
     <button onclick="dateTime()">Click me on display Date Time</button>
     <p id="date"></p>
 
-    <h1>Change css</h1>
-    <button onclick="""></button>
+    <h1 id="change-css">Change css</h1>
+    <button onclick="changeCss()">Change</button>
 </body>
 </html>
-scr
 <script>
     function dateTime(){
         const date = document.getElementById("date")
         date.innerHTML = Date();
-    }   
+    }
+    function changeCss(){
+        var color = ["red", "green", "yellow"]
+        const changeColor = document.getElementById("change-css")
+        changeColor.style.color= color[Math.floor(Math.random()*color.length)]
+    }
 </script>
